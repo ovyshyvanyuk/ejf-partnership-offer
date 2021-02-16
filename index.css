@@ -1,0 +1,27 @@
+html, body {
+    margin: 0;
+    padding: 0;
+    max-width: 100%;
+}
+
+.section {
+    height: 100vh;
+}
+
+#first-section {
+    background-color: gray;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#first-section .panel {
+    width: 500px;
+    border-radius: 20px;   
+    text-align: center;
+    background-color: rgba(255, 255, 255, 0.3);
+}
+
+#first-section .panel h1 {
+
+}
