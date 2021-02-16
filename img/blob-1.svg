@@ -1,0 +1,32 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 308.29 400.7">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #fff;
+        filter: url(#luminosity-noclip);
+      }
+
+      .cls-2 {
+        mask: url(#mask);
+      }
+
+      .cls-3 {
+        fill: #4aa0d9;
+      }
+    </style>
+    <filter id="luminosity-noclip" x="0" y="0" width="808.86" height="405.99" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+      <feFlood flood-color="#fff" result="bg"/>
+      <feBlend in="SourceGraphic" in2="bg"/>
+    </filter>
+    <mask id="mask" x="0" y="0" width="808.86" height="405.99" maskUnits="userSpaceOnUse">
+      <rect class="cls-1" x="209.79" y="110" width="599.07" height="295.98" rx="45.86"/>
+    </mask>
+  </defs>
+  <g id="Layer_2" data-name="Layer 2">
+    <g id="Layer_1-2" data-name="Layer 1">
+      <g class="cls-2">
+        <path class="cls-3" d="M74.25,83.52C67.32,77.83,23,40.9,31.87,21.51c2.57-5.59,8.91-8.33,49.42-13.94C131,.69,156.2-2.64,173.79,2.5c9.69,2.84,35.33,10.72,55,35.39,4.49,5.63,21.29,27.24,22.09,56.06.32,11.57-2.22,14.24-1.1,26.39,1.93,20.86,11.52,35.63,16.16,43,28.74,46,43.12,69,42.29,91.25-1.35,36.44-39.25,64.54-59.48,79.55-10.37,7.68-24.3,14.51-52.18,28.16-47.34,23.19-71,34.78-89.39,36.84-7.74.87-70.65,9.76-94.23-28.43C-3.14,344.63-1.6,311.47,3.54,281.2c8.52-50.14,27.65-124.8,74.12-213.62"/>
+      </g>
+    </g>
+  </g>
+</svg>
