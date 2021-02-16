@@ -7,6 +7,7 @@ html, body {
 
 .section {
     height: 100vh;
+    overflow: hidden;
 }
 
 /* FIRST SECTION */
@@ -14,18 +15,70 @@ html, body {
 #first-section {
     background-color: gray;
     display: flex;
+    position: relative;
     align-items: center;
     justify-content: center;
+    background-image: url('./img/background-1.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position-x: center;
+}
+
+#first-section::before {
+    content: '';
+    display: block;
+    width: 300px;
+    height: 224px;
+    background-image: url(./img/curves-1.svg);
+    background-repeat: no-repeat;
+    position: absolute;
+    top: -50px;
+    right: -40px;
+}
+
+#first-section::after {
+    content: '';
+    display: block;
+    width: 300px;
+    height: 224px;
+    background-image: url(./img/curves-2.svg);
+    background-repeat: no-repeat;
+    position: absolute;
+    bottom: -50px;
+    left: -40px;
+}
+
+#first-section .mark-left {
+    position: absolute;
+    width: 400px;
+    left: -150px;
+    z-index: 1;
+}
+
+#first-section .mark-right {
+    position: absolute;
+    width: 400px;
+    right: -150px;
+}
+
+#first-section .logo {
+    position: absolute;
+    width: 200px;
+    top: 40px;
 }
 
 #first-section .panel {
+    position: relative;
     width: 775px;
     border-radius: 40px;   
     text-align: center;
-    background-color: rgba(255, 255, 255, 0.3);
-    backdrop-filter: blur(23x);
+    background-color: rgba(255, 255, 255, 0.1);
+    color: white;
+    backdrop-filter: blur(10px);
     box-shadow: inset 0px 0px 15px -3px rgba(255, 255, 255, 0.2),
                 0px 0px 15px 1px rgba(255, 255, 255, 0.5);
+    z-index: 2;
+    
 }
 
 #first-section .panel h1 {
@@ -40,6 +93,12 @@ html, body {
     margin-bottom: 92px;
     text-transform: uppercase;
     font-family: 'Montserrat';
+}
+
+#first-section .panel .finger {
+    width: 80px;
+    position: absolute;
+    bottom: -45px;
 }
 
 @media screen and (max-width: 900px) {
@@ -57,8 +116,26 @@ html, body {
     }
 }
 
+@media screen and (max-width: 650px) {
+    #first-section .mark-left, #first-section .mark-right {
+        display: none;
+    }
+}
+
 /* SECOND SECTION */
 
 #second-section {
+    display: flex;
+    flex-direction: row;
+}
+
+#second-section .left {
+    display: flex;
+    flex-direction: column;
+    width: 40%;
+}
+
+#second-section .right {
+    flex-grow: 1;
     
 }
