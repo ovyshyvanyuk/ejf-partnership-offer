@@ -311,3 +311,54 @@ body {
 #third-section .feedback #cypress {
     max-width: 55%;
 }
+
+
+/* FOURTH SECTION */
+
+#fourth-section {
+    background-image: url("./img/fourth-background.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#fourth-section .container {
+    position: relative;
+    background-color: rgba(255, 255, 255, 0.34);
+    width: 75vw;
+    height: 84vh;
+}
+
+#fourth-section .heading-color {
+    position: absolute;
+    background-color: rgba(255, 255, 255, 0.65);
+    height: 20vh;
+    width: 100%;
+    z-index: 1;
+}
+
+#fourth-section .top {
+    padding: 6% 8% 0 5%;
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+    z-index: 2;
+}
+
+#fourth-section .top h2 {
+    order: 1;
+}
+
+#fourth-section .base-option {
+    color: whitesmoke;
+    background-image: url("./img/base-background.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    border-radius: 20px;
+    width: 44%;
+    height: 32%;
+    order: -1;
+    align-self: flex-start;
+}
