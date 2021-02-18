@@ -3,13 +3,14 @@ body {
     margin: 0;
     padding: 0;
     max-width: 100%;
-    font-family: 'Montserrat Alternates', sans-serif;
+    font-family: 'Montserrat', sans-serif;
 }
 
 .section {
     height: 100vh;
     overflow: hidden;
     position: relative;
+    box-sizing: border-box;
 }
 
 
@@ -131,6 +132,7 @@ body {
     align-items: center;
     background: #172846;
     color: white;
+    font-family: "Montserrat", sans-serif;
 }
 
 #second-section::before {
@@ -163,6 +165,9 @@ body {
     text-transform: uppercase;
 }
 
+#second-section .left p,
+#second-section .left h2 {}
+
 #second-section .left img {
     width: 60%;
     max-width: 170px;
@@ -172,7 +177,7 @@ body {
     display: flex;
     justify-content: space-between;
     flex-direction: column;
-    width: 60%;
+    width: 55%;
     height: 75%;
     background: rgba(255, 255, 255, 0.1);
     padding: 40px 6% 20px;
@@ -224,7 +229,7 @@ body {
     background-repeat: no-repeat;
     color: white;
     font-family: 'Montserrat', sans-serif;
-    padding: 12px 32px 32px 32px;
+    padding: 32px 32px 32px 32px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -241,7 +246,7 @@ body {
 }
 
 #third-section .features p {
-    font-size: 20px;
+    font-size: calc(8px + 0.7vw);
 }
 
 #third-section .features span {
@@ -256,8 +261,8 @@ body {
     padding: 4px;
     border-radius: 4px;
     background-color: rgba(255, 3, 135, 0.52);
-    width: 20px;
-    height: 20px;
+    width: 1.2em;
+    height: 1.2em;
     content: "";
     left: -10px;
     top: -5px;
@@ -269,17 +274,40 @@ body {
 }
 
 #third-section .feedback {
-    padding: 5% 10%;
+    display: flex;
+    padding: 2% 14% 5%;
+    justify-content: space-between;
 }
 
-#third-section .feedback h2 {
+#third-section .feedback-heading {
+    margin: 40px 0 0;
     padding: 12px;
     border-radius: 8px;
     background-color: rgba(16, 27, 55, 0.32);
     display: inline-block;
 }
 
-#third-section .feedback div {
+#third-section .feedback .review {
     display: inline-block;
     background-color: rgba(252, 252, 252, 0.12);
+    padding: 1% 4%;
+    border-radius: 30px;
+    height: 30vh;
+}
+
+#third-section .review p {
+    font-size: 1.2vw;
+    text-align: justify;
+}
+
+#third-section .review h3 {
+    font-size: 1.4vw;
+}
+
+#third-section .feedback #zoom {
+    margin-right: 4%;
+}
+
+#third-section .feedback #cypress {
+    max-width: 55%;
 }
