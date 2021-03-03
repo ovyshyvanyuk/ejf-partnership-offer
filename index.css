@@ -165,9 +165,6 @@ body {
     text-transform: uppercase;
 }
 
-#second-section .left p,
-#second-section .left h2 {}
-
 #second-section .left img {
     width: 60%;
     max-width: 170px;
@@ -324,10 +321,22 @@ body {
     justify-content: center;
 }
 
+#fourth-section h3,
+#fourth-section h4 {
+    margin: 0;
+}
+
+#fourth-section p {
+    margin: 0;
+}
+
 #fourth-section .container {
     position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
     background-color: rgba(255, 255, 255, 0.34);
-    width: 75vw;
+    width: 60vw;
     height: 84vh;
 }
 
@@ -340,11 +349,12 @@ body {
 }
 
 #fourth-section .top {
-    padding: 6% 8% 0 5%;
+    padding: 4% 8% 0 6%;
     display: flex;
     justify-content: space-between;
     position: relative;
     z-index: 2;
+    height: 100%;
 }
 
 #fourth-section .top h2 {
@@ -357,8 +367,74 @@ body {
     background-size: cover;
     background-repeat: no-repeat;
     border-radius: 20px;
-    width: 44%;
-    height: 32%;
+    width: 45%;
     order: -1;
     align-self: flex-start;
+    padding: 2.5% 3% 3%;
+}
+
+#fourth-section .base-option h3 {
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 1.4vw;
+    margin: 0 0 4%;
+}
+
+#fourth-section .base-option .price {
+    font-weight: bold;
+    float: right;
+    font-size: 2vw;
+    margin: 3% 0 0;
+}
+
+#fourth-section .right h2 {
+    margin: 4% 0 14% 4%;
+    text-transform: uppercase;
+    font-size: 3em;
+}
+
+#fourth-section .discounts {
+    width: 100%;
+    text-align: right;
+}
+
+#fourth-section .discounts th {
+    font-size: 120%;
+    text-transform: uppercase;
+}
+
+#fourth-section .bottom {
+    height: 100%;
+    padding: 0 6% 6% 6%;
+}
+
+#fourth-section .options-container {
+    display: flex;
+    flex-direction: column;
+}
+
+#fourth-section .options-container>div {
+    display: flex;
+    justify-content: space-between;
+}
+
+#fourth-section .option {
+    position: relative;
+    background-color: rgba(255, 255, 255, 0.72);
+    border-radius: 8px;
+    width: 100%;
+    z-index: 0
+}
+
+#fourth-section .option-stripe {
+    position: absolute;
+    z-index: 1;
+    width: 5%;
+    height: 100%;
+    background-color: #A4A6D3;
+    border-radius: 8px 0 0 8px;
+}
+
+#fourth-section .option-content {
+    padding: 0 0 0 12%;
 }
