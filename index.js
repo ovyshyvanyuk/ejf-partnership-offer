@@ -28,7 +28,9 @@ function optionSelect(tag) {
         deleteElement.newBasketItem.remove();
     }
 
-    summary.innerText = summaryPrice.toString();
+    let discount = (basket.children.length - 2) * 1000;
+
+    summary.innerText = (summaryPrice - discount).toString();
 }
 
 function removeItem(tag) {
@@ -45,5 +47,7 @@ function removeItem(tag) {
     let option = document.getElementById(caption.toLowerCase());
     option.querySelector("div.option-content input.add").checked = false;
 
-    summary.innerText = summaryPrice.toString();
+    let discount = (basket.children.length - 2) * 1000;
+
+    summary.innerText = (summaryPrice - discount).toString();
 }

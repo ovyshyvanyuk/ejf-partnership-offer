@@ -149,6 +149,7 @@ body {
     position: absolute;
     top: -10px;
     left: -31px;
+    z-index: 0;
 }
 
 #second-section .left {
@@ -184,12 +185,16 @@ body {
     padding: 40px 6% 20px;
     margin-right: 30px;
     border-radius: 15px;
+    position: relative;
+    z-index: 1;
 }
 
 #second-section .right h2 {
     text-align: center;
     font-size: 32px;
     margin-top: 0;
+    position: relative;
+    z-index: 2;
 }
 
 #second-section .right img {
@@ -220,6 +225,19 @@ body {
     }
     #second-section .right img {
         width: 70px;
+    }
+}
+
+@media (-webkit-min-device-pixel-ratio: 1.26) {
+    #second-section {
+        font-size: 0.8em;
+    }
+    #second-section .right img {
+        width: 18%;
+        margin: 0 auto 1%;
+    }
+    #second-section .right h2 {
+        font-size: 1.5em;
     }
 }
 
@@ -544,6 +562,24 @@ body {
     }
     #fourth-section .options-container>div {
         gap: 10px;
+    }
+}
+
+@media (-webkit-min-device-pixel-ratio: 1.26) {
+    #fourth-section .container {
+        font-size: 0.9em;
+    }
+    #fourth-section .top {
+        padding: 2% 8% 0 6%;
+    }
+    #fourth-section .right h2 {
+        margin: 2% 0 12% 4%;
+    }
+    #fourth-section .options-container {
+        gap: 10px;
+    }
+    #fourth-section .bottom h3 {
+        margin: 0 0 0.3em;
     }
 }
 
