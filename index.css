@@ -131,6 +131,10 @@ body {
     flex-direction: row;
     align-items: center;
     background: #172846;
+    background-image: url("./img/section2-bg.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position-x: center;
     color: white;
     font-family: "Montserrat", sans-serif;
 }
@@ -175,10 +179,11 @@ body {
     justify-content: space-between;
     flex-direction: column;
     width: 55%;
-    height: 75%;
-    background: rgba(255, 255, 255, 0.1);
+    height: 60%;
+    background: rgba(136, 216, 235, 0.16);
     padding: 40px 6% 20px;
     margin-right: 30px;
+    border-radius: 15px;
 }
 
 #second-section .right h2 {
@@ -188,14 +193,15 @@ body {
 }
 
 #second-section .right img {
-    width: 95px;
-    margin: 0 auto;
+    width: 20%;
+    margin: 0 auto 4%;
     display: block;
 }
 
 @media screen and (max-width: 650px) {
     #second-section {
         flex-direction: column-reverse;
+        height: unset;
     }
     #second-section .left {
         width: 100%;
@@ -230,6 +236,7 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
+    justify-content: space-evenly;
 }
 
 #third-section .ejf-highlight {
@@ -274,6 +281,7 @@ body {
     display: flex;
     padding: 2% 12% 0;
     justify-content: space-between;
+    margin-bottom: 3%;
 }
 
 #third-section .feedback-heading {
@@ -289,7 +297,6 @@ body {
     background-color: rgba(252, 252, 252, 0.12);
     padding: 1% 4%;
     border-radius: 30px;
-    height: 34vh;
 }
 
 #third-section .review p {
@@ -436,16 +443,20 @@ body {
     padding: 0 6% 6% 6%;
 }
 
+#fourth-section .bottom h3 {
+    margin: 0 0 1em;
+}
+
 #fourth-section .options-container {
     display: flex;
     flex-direction: column;
-    gap: 10px;
+    gap: 25px;
 }
 
 #fourth-section .options-container>div {
     display: flex;
     justify-content: space-between;
-    gap: 10px;
+    gap: 25px;
 }
 
 #fourth-section .option {
@@ -453,7 +464,7 @@ body {
     background-color: rgba(255, 255, 255, 0.72);
     border-radius: 8px;
     width: 100%;
-    z-index: 0
+    z-index: 0;
 }
 
 #fourth-section .option-stripe {
@@ -466,7 +477,26 @@ body {
 }
 
 #fourth-section .option-content {
-    padding: 0 0 0 12%;
+    padding: 2% 2% 2% 12%;
+    display: flex;
+    flex-direction: column;
+}
+
+#fourth-section .add {
+    width: 15px;
+    height: 15px;
+    cursor: pointer;
+    position: absolute;
+    top: 8%;
+    right: 3%;
+    min-width: 10px;
+    min-height: 10px;
+}
+
+#fourth-section .option-content>span {
+    font-size: large;
+    font-weight: 600;
+    align-self: flex-end;
 }
 
 @media screen and (max-width: 1000px) {
@@ -500,11 +530,20 @@ body {
     #fourth-section .base-option.mobile {
         display: block;
         width: 85%;
-        margin: 0 auto;
+        margin: 0 auto 5%;
         padding-bottom: 35px;
+    }
+    #fourth-section .discounts {
+        margin: 0 auto 5%;
     }
     #fourth-section .base-option.desktop {
         display: none;
+    }
+    #fourth-section .options-container {
+        gap: 10px;
+    }
+    #fourth-section .options-container>div {
+        gap: 10px;
     }
 }
 
@@ -592,6 +631,33 @@ body {
     border: none;
     background-color: #6764AC;
     color: white;
+    cursor: pointer;
+}
+
+@media screen and (max-width: 1100px) {
+    #fifth-section .container {
+        width: 95vw;
+        height: 95vh;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    #fifth-section {
+        height: unset;
+    }
+    #fifth-section .container {
+        height: unset;
+        margin: 5vh 0 5vh;
+        flex-direction: column;
+    }
+    #fifth-section .container .left {
+        width: auto;
+        margin: 4% 2% 4%;
+    }
+    #fifth-section .container .right {
+        width: auto;
+        margin: 0 2% 4%;
+    }
 }
 
 
