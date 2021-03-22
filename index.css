@@ -735,6 +735,7 @@ body {
 
 #sixth-section .info-container img {
     width: 45%;
+    height: auto;
     align-self: center;
     height: fit-content;
 }
