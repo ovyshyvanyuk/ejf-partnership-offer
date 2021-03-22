@@ -787,9 +787,16 @@ body {
 @media screen and (max-width: 600px) {
     #sixth-section .info-container {
         flex-direction: column;
+        width: 95vw;
     }
     #sixth-section .info-container img {
         min-height: 70px;
+    }
+    #sixth-section .facts {
+        width: 95vw;
+    }
+    #sixth-section .contacts-container {
+        width: 95vw;
     }
     #sixth-section .contacts {
         flex-direction: column;
