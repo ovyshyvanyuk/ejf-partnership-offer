@@ -10,6 +10,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Montserrat+Alternates&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@800&display=swap" rel="stylesheet">
+    <script src="index.js" defer></script>
     <title>ІЯК 2021 пропозиція співпраці</title>
 </head>
 
@@ -127,7 +128,7 @@
                                     <p>Company visit</p>
                                 </div>
                                 <span>5000 UAH</span>
-                                <input class="add" type="checkbox">
+                                <input class="add" type="checkbox" onclick="optionSelect(this)">
                             </div>
                         </div>
 
@@ -141,7 +142,7 @@
                                     <br>
                                 </div>
                                 <span>3000 UAH</span>
-                                <input class="add" type="checkbox">
+                                <input class="add" type="checkbox" onclick="optionSelect(this)">
                             </div>
                         </div>
 
@@ -158,7 +159,7 @@
                                     <p>в Telegram, Facebook</p>
                                 </div>
                                 <span>3000 UAH</span>
-                                <input class="add" type="checkbox">
+                                <input class="add" type="checkbox" onclick="optionSelect(this)">
                             </div>
                         </div>
 
@@ -172,7 +173,7 @@
                                     <br>
                                 </div>
                                 <span>3000 UAH</span>
-                                <input class="add" type="checkbox">
+                                <input class="add" type="checkbox" onclick="optionSelect(this)">
                             </div>
                         </div>
                     </div>
@@ -183,31 +184,11 @@
 
     <section id="fifth-section" class="section">
         <div class="container">
-            <div class="left">
-                <div class="selected-option base-option">
+            <div id="basket" class="left">
+                <div id="base-option" class="selected-option">
                     <h3>Базовий пакет</h3>
                     <span>6000 UAH</span>
-                    <img src="./img/close.svg">
-                </div>
-                <div class="selected-option base-option">
-                    <h3>Базовий пакет</h3>
-                    <span>6000 UAH</span>
-                    <img src="./img/close.svg">
-                </div>
-                <div class="selected-option base-option">
-                    <h3>Базовий пакет</h3>
-                    <span>6000 UAH</span>
-                    <img src="./img/close.svg">
-                </div>
-                <div class="selected-option base-option">
-                    <h3>Базовий пакет</h3>
-                    <span>6000 UAH</span>
-                    <img src="./img/close.svg">
-                </div>
-                <div class="selected-option base-option">
-                    <h3>Базовий пакет</h3>
-                    <span>6000 UAH</span>
-                    <img src="./img/close.svg">
+                    <img src="./img/close.svg" onclick="removeItem(this)">
                 </div>
             </div>
             <div class="right">
