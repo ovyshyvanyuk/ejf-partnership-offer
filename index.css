@@ -562,6 +562,7 @@ body {
     width: 60vw;
     height: 84vh;
     display: flex;
+    border-radius: 30px;
 }
 
 #fifth-section .container .left,
@@ -642,6 +643,7 @@ body {
     background-color: #6764AC;
     color: white;
     cursor: pointer;
+    font-family: 'Montserrat', sans-serif;
 }
 
 @media screen and (max-width: 1100px) {
@@ -674,7 +676,7 @@ body {
 /* SIXTH SECTION */
 
 #sixth-section {
-    background-image: url(./img/fourth-background.jpg);
+    background-color: #101B37;
     color: white;
     height: unset;
     padding-bottom: 2vh;
@@ -687,11 +689,11 @@ body {
 
 #sixth-section .info-container {
     display: flex;
-    width: 90%;
+    width: 60vw;
     margin: 0 auto;
     border-radius: 30px;
     background-color: rgba(255, 255, 255, 0.1);
-    padding: 24px;
+    padding: 5%;
     box-sizing: border-box;
 }
 
@@ -707,9 +709,9 @@ body {
 
 #sixth-section .facts {
     display: flex;
-    width: 80%;
+    width: 60vw;
     margin: 64px auto 0;
-    justify-content: space-around;
+    justify-content: space-evenly;
 }
 
 #sixth-section .fact {
@@ -717,6 +719,7 @@ body {
     width: 33%;
     text-align: center;
     font-size: 18px;
+    font-weight: bold;
 }
 
 #sixth-section .fact span {
@@ -737,26 +740,51 @@ body {
 }
 
 #sixth-section .contacts-container {
-    margin-top: 36px;
-    width: 80%;
-    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 80vw;
+    margin: 5% auto 5%;
 }
 
 #sixth-section .contacts-container .contacts {
-    justify-content: space-between;
+    align-items: center;
+    justify-content: space-evenly;
     display: flex;
+    gap: 25px;
 }
 
 #sixth-section .contacts-container .contact-card {
     display: flex;
     flex-direction: column;
-    width: 280px;
+    align-items: center;
     border-radius: 30px;
     background: rgba(255, 255, 255, 0.12);
-    height: 400px;
+    padding: 4% 6% 4%;
+    width: max-content;
 }
 
-@media screen and (max-width: 550px) {
+#sixth-section .contacts-container .contact-card img {
+    width: 15vw;
+    max-width: 200px;
+    border-radius: 50%;
+}
+
+#sixth-section .contacts-container .contact-card .contact-info {
+    margin: 5% 0 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+#sixth-section .contacts-container .contact-card .contact-info .name {
+    font-weight: bold;
+    font-size: 1.5em;
+}
+
+@media screen and (max-width: 600px) {
     #sixth-section .info-container {
         flex-direction: column;
     }
@@ -766,5 +794,28 @@ body {
     #sixth-section .contacts {
         flex-direction: column;
         gap: 12px;
+    }
+    #sixth-section .contacts .contact-info .name {
+        font-size: 1.5em;
+    }
+    #sixth-section .contacts .contact-info span {
+        font-size: 1em;
+    }
+    #sixth-section .contacts .contact-card {
+        width: 60vw;
+    }
+}
+
+@media screen and (max-width: 1000px) and (min-width: 601px) {
+    #sixth-section .info-container,
+    #sixth-section .facts,
+    #sixth-section .contacts-container {
+        width: 95vw;
+    }
+    #sixth-section .contacts .contact-info .name {
+        font-size: 0.8em;
+    }
+    #sixth-section .contacts .contact-info span {
+        font-size: 0.6em;
     }
 }
