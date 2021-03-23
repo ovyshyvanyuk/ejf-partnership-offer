@@ -60,7 +60,7 @@ var messageBox = {
 }
 
 function optionSelect(tag) {
-    let optionTag = tag.parentElement;
+    let optionTag = tag.parentElement.parentElement;
 
     if (tag.checked) {
         let newBasketItem = basketTemplate.cloneNode(true);
@@ -98,11 +98,12 @@ function removeItem(tag) {
         if (basketContains[i].caption === caption)
             deleteElement = basketContains[i];
     }
+    console.log(deleteElement.newBasketItem);
     summaryPrice -= (deleteElement.newBasketItem.getElementsByTagName("span")[0].innerText).slice(0, 4);
     deleteElement.newBasketItem.remove();
 
     let option = document.getElementById(caption.toLowerCase());
-    option.querySelector("div.option-content input.add").checked = false;
+    option.querySelector("div.option-content div.buttons input.add").checked = false;
 
     let discount = (basket.children.length - 2) * 1000;
 
