@@ -411,6 +411,7 @@ body {
 }
 
 #fourth-section .base-option {
+    position: relative;
     color: whitesmoke;
     background-image: url("./img/base-background.png");
     background-size: cover;
@@ -420,6 +421,15 @@ body {
     order: -1;
     align-self: flex-start;
     padding: 2.5% 3% 3%;
+}
+
+#fourth-section .base-option .info {
+    width: 10%;
+    height: 10%;
+    position: absolute;
+    right: 5%;
+    top: 8%;
+    cursor: pointer;
 }
 
 #fourth-section .base-option.mobile {
@@ -500,13 +510,17 @@ body {
     flex-direction: column;
 }
 
-#fourth-section .add {
-    width: 15px;
-    height: 15px;
-    cursor: pointer;
+#fourth-section .option .buttons {
     position: absolute;
     top: 8%;
     right: 3%;
+}
+
+#fourth-section .add,
+#fourth-section .option .info {
+    width: 15px;
+    height: 15px;
+    cursor: pointer;
     min-width: 10px;
     min-height: 10px;
 }
@@ -665,8 +679,10 @@ body {
 #fifth-section .container .right input {
     font-size: 1em;
     font-family: 'Montserrat', sans-serif;
-    padding: 0.2em;
+    padding: 0.5em;
     margin-bottom: 3%;
+    border-radius: 5px;
+    border: none;
 }
 
 #fifth-section .container .right button {
