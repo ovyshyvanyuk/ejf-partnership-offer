@@ -86,8 +86,10 @@ function optionSelect(tag) {
         let caption = optionTag.children[0].innerText;
         let deleteElement = 0;
         for (let i = 0; i < basketContains.length; i++) {
-            if (basketContains[i].caption === caption)
+            if (basketContains[i].caption === caption) {
                 deleteElement = basketContains[i];
+                basketContains.splice(i, 1);
+            }
         }
         summaryPrice -= (deleteElement.newBasketItem.getElementsByTagName("span")[0].innerText).slice(0, 4);
         deleteElement.newBasketItem.remove();
@@ -105,10 +107,11 @@ function removeItem(tag) {
     let caption = optionTag.children[0].innerText;
     let deleteElement = 0;
     for (let i = 0; i < basketContains.length; i++) {
-        if (basketContains[i].caption === caption)
+        if (basketContains[i].caption === caption) {
             deleteElement = basketContains[i];
+            basketContains.splice(i, 1);
+        }
     }
-    console.log(deleteElement.newBasketItem);
     summaryPrice -= (deleteElement.newBasketItem.getElementsByTagName("span")[0].innerText).slice(0, 4);
     deleteElement.newBasketItem.remove();
 
