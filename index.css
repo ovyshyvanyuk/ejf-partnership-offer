@@ -193,6 +193,10 @@ body {
     color: white;
 }
 
+#second-section .right a:visited {
+    color: white;
+}
+
 #second-section .right h2 {
     text-align: center;
     font-size: 32px;
