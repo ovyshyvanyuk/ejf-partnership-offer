@@ -3,6 +3,16 @@ var basketTemplate = document.getElementById("base-option");
 var basketContains = [];
 var summaryPrice = 6000;
 var summary = document.getElementById("value");
+document.getElementById("submit").onclick = submit;
+
+var letterOptions = {
+    headhunter: '<img class="adapt-img" src="https://i.imgur.com/d4l9Qnp.png" alt="" style="display:block;border:0;outline:none;text-decoration:none;-ms-interpolation-mode:bicubic" width="560">',
+    promoter: '<img class="adapt-img" src="https://i.imgur.com/nYP6ajS.png" alt="" style="display:block;border:0;outline:none;text-decoration:none;-ms-interpolation-mode:bicubic" width="560">',
+    pitcher: '<img class="adapt-img" src="https://i.imgur.com/qBp1ve5.png" alt="" style="display:block;border:0;outline:none;text-decoration:none;-ms-interpolation-mode:bicubic" width="560">',
+    trainer: '<img class="adapt-img" src="https://i.imgur.com/YUHTtBC.png" alt="" style="display:block;border:0;outline:none;text-decoration:none;-ms-interpolation-mode:bicubic" width="560">'
+}
+emailjs.init("user_8XZiJXEw85pkct6AA77RQ");
+
 var messageBox = {
     base: {
         heading: "Базовий пакет",
@@ -114,4 +124,24 @@ function removeItem(tag) {
 
 function showInfo(type) {
     swal(messageBox[type].heading, messageBox[type].text);
+}
+
+function submit() {
+    let letterBasket = "";
+    for (let i = 0; i < basketContains.length; i++) {
+        letterBasket += letterOptions[basketContains[i].caption.toLowerCase()];
+    }
+
+    let templateParams = {
+        basket: letterBasket,
+        price: summary.innerText,
+        reciever: document.getElementById("email").value
+    }
+
+    emailjs.send('ejf_2021', 'ejf_template', templateParams)
+        .then(function(response) {
+            swal("Лист успішно відправлено на пошту: " + templateParams.reciever);
+        }, function(error) {
+            swal(error, "Виникла помилка при відправці листа");
+        });
 }

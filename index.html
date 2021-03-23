@@ -11,6 +11,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@800&display=swap" rel="stylesheet">
     <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js" defer></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/emailjs-com@2/dist/email.min.js" defer></script>
     <script src="index.js" defer></script>
     <title>ІЯК 2021 пропозиція співпраці</title>
 </head>
@@ -45,8 +46,10 @@
                 <p>- це знайомство студентів із провідними компаніями, які прагнуть почати свій кар'єрний шлях або змінити його напрям.
                 </p>
                 <p>
-                    HOPIN - це віртуальна платформа з великою кількістю інтерактивних зон, оптимізованих для взаємодії користувачів між собою. Учасники можуть переміщатись між приміщеннями, відвідувати виставки компаній, зустрічатись з випадковими чи вибраними людьми один
-                    на один, спілкуватись та заводити нові знайомства - все так само, як і в живому форматі, тільки тепер віртуально!
+                    <a target="_blank" rel="noopener noreferrer" href="https://hopin.com/why">HOPIN</a> - це віртуальна платформа з великою кількістю інтерактивних зон, оптимізованих для взаємодії користувачів між собою.
+                </p>
+                <p>
+                    Учасники можуть переміщатись між приміщеннями, відвідувати виставки компаній, зустрічатись з випадковими чи вибраними людьми один на один, спілкуватись та заводити нові знайомства - все так само, як і в живому форматі, тільки тепер віртуально!
                 </p>
             </div>
             <img src="./img/ejf-logo.svg" alt="">
@@ -212,10 +215,10 @@
                     <p>Кінцева сума: </p>
                     <p class="summary-price"><span id="value">6000</span> UAH</p>
                 </div>
-                <form>
+                <form method="POST">
                     <input type="text" name="company-name" placeholder="Назва компанії">
-                    <input type="email" name="email" placeholder="Ваш email">
-                    <button type="submit">ОФОРМИТИ</button>
+                    <input id="email" type="email" name="email" placeholder="Ваш email">
+                    <button id="submit" type="button" onclick="submit()">ОФОРМИТИ</button>
                 </form>
             </div>
         </div>

@@ -189,6 +189,10 @@ body {
     z-index: 1;
 }
 
+#second-section .right a {
+    color: white;
+}
+
 #second-section .right h2 {
     text-align: center;
     font-size: 32px;
@@ -601,7 +605,9 @@ body {
 /* FIFTH SECTION */
 
 #fifth-section {
-    background-color: #172846;
+    background-image: url("./img/fifth-background.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -629,18 +635,22 @@ body {
 }
 
 #fifth-section .container .left .selected-option {
+    position: relative;
     display: flex;
     align-items: center;
-    justify-content: space-evenly;
+    justify-content: space-between;
     background-color: #6764AC;
     border-radius: 15px;
     height: 16%;
     margin-bottom: 20px;
+    padding: 0 10% 0 3%;
 }
 
 #fifth-section .container .selected-option img {
-    width: 15px;
-    height: 15px;
+    position: absolute;
+    top: 12%;
+    right: 3.5%;
+    width: 10px;
     cursor: pointer;
 }
 
